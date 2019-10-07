@@ -221,7 +221,7 @@ print(a is b)
 #  逻辑运算符	       含义	        基本格式	                        功能
 #     and	    逻辑与（简称“与”）	a and b	    有 2 个操作数 a 和 b，只有它们都是 True 时，才返回 True，否则返回 False。
 #     or	    逻辑或（简称“或”）	a or b	    有 2 个操作数 a 和 b ，只有它们都是 False 时，才返回 False，否则返回 True。
-#    not	    逻辑非（简称“非”）	not a	    只需要 1 个操作数 a，如果 a 的值为 True，则返回 False；反之，如果 a 的值为 False，则返回 True。
+#     not	    逻辑非（简称“非”）	not a	    只需要 1 个操作数 a，如果 a 的值为 True，则返回 False；反之，如果 a 的值为 False，则返回 True。
 
 print("------------------- 逻辑运算符 -------------------")
 # 直接对False求非运算，将返回True
@@ -270,6 +270,7 @@ print(st)
 # 如果将上面语句中的逗号改为分号，将逗号之后的语句改为赋值语句，即写成如下形式：
 
 # 第一个返回值部分使用两条语句，分号隔开，如果将上面语句中的逗号改为分号，将逗号之后的语句改为赋值语句，即写成如下形式：
-st = print("crazyit");x = 20 if a > b else "a不大于b"
+st = print("crazyit");
+x = 20 if a > b else "a不大于b"
 print(st)
 print(x)
