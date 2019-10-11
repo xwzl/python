@@ -79,3 +79,36 @@ print(b_tuple)
 # 创建区间时还指定步长
 c_tuple = tuple(range(4, 20, 3))
 print(c_tuple)
+
+# python 访问元祖元素
+#
+# 和列表完全一样，如果想访问元组中的元素，可以使用元组中各元素的索引值获取，
+getTuple = (1, 2, 3, 4)
+print("获取单个元素", getTuple[1])
+
+print("通过切片获取元组元素：", getTuple[:2])
+
+# python 修改元组元素
+#
+# 前面讲过，元组是不可变序列，元组的元素不可以单独进行修改。但是元组也不是完全不能修改
+
+# 我们可以对元组进行重新赋值：
+a_tuple = ('crazyit', 20, -1.2)
+print(a_tuple)
+# 对元组进行重新赋值
+a_tuple = ('c.biancheng.net', "C语言中文网")
+print(a_tuple)
+
+# 另外，还可以通过连接多个元组的方式向元组中添加新元素。例如：
+a_tuple = ('crazyit', 20, -1.2)
+print(a_tuple)
+# 连接多个元组
+a_tuple = a_tuple + ('c.biancheng.net',)
+print(a_tuple)
+# 需要注意的是，在使用此方式时，元组连接的内容必须都是元组，不能将元组和字符串或列表进行连接，否则或抛出 TypeError 错误
+
+# Python删除元组
+a_tuple = ('crazyit', 20, -1.2)
+print(a_tuple)
+# 删除a_tuple元组,基本不用删除 垃圾回收机制
+# del (a_tuple)
