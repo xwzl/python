@@ -21,3 +21,61 @@
 #   <class 'tuple'>
 #
 # 可以看到，元组是 typle 类型，这也是很多教程中用 tuple 指代元组的原因。
+
+# Python 创建元组
+#
+# Python 提供了多种创建元组的方法，下面一一进行介绍。
+#
+# 和其他类型的 Python 变量一样，在创建元组时，可以使用赋值运算符“=”直接将一个元组赋值给变量，其语法格式如下：
+#
+#       tuplename = (element1,element2,...,elementn)
+#
+# 其中，tuplename 表示创建的元组名，可以使用任何符合 Python 命名规则，且不和 Python 内置函数重名的标识符作为元组名。
+# 再次强调，创建元组的语法和创建列表的语法非常相似，唯一的不同在于，创建列表使用的是 []，而创建元组使用的是 ()。
+
+print("------------- = 运算符直接创建元组 -------------")
+
+# 合法元组对象
+num = (7, 14, 21, 28, 35)
+a_tuple = ("C语言中文网", "http://c.biancheng.net")
+python = ("Python", 19, [1, 2], ('c', 2.0))
+
+print(a_tuple)
+
+# 创建元组 a_typle
+a_tuple = ("C语言中文网",)
+print(type(a_tuple))
+print(a_tuple)
+
+# 需要额外注意的一点是，当创建的元组中只有一个元素时，此元组后面必须要加一个逗号“,”，否则 Python 解释器会将其误认为字符串
+# 创建字符串 a
+a = ("C语言中文网")
+print(type(a))
+print(a)
+
+print("需要额外注意一点的是,元组中只有一个元素是，python 解释器会误认为字符串")
+
+# 使用tuple()函数创建元组
+#
+# 除了第一种最常见的创建方式外，Python还提供了 tuple() 函数来创建元组，它可以直接将列表、区间（range）等对象转换成元组。
+#
+# tuple 函数的语法格式如下：
+#
+#   tuple(data)
+#
+# 其中，data 表示可以转化为元组的数据，其类型可以是字符串、元组、range 对象等。
+
+# 将列表元素转换为元组
+# 将列表转换成元组
+a_list = ['crazyIt', 20, -1.2]
+a_tuple = tuple(a_list)
+print(a_tuple)
+# 使用range()函数创建区间（range）对象
+a_range = range(1, 5)
+print(a_range)
+# 将区间转换成元组
+b_tuple = tuple(a_range)
+print(b_tuple)
+# 创建区间时还指定步长
+c_tuple = tuple(range(4, 20, 3))
+print(c_tuple)
