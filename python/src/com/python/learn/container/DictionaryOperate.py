@@ -249,3 +249,18 @@ print(a)
 # 设置默认值，该key在dict中存在，不会修改dict内容
 print(a.setdefault('one', 3.4))
 print(a)
+
+print("字典格式化字符串")
+temp = "前天我从 %(source)s 买了一本 %(book)s ,价值 %(price)5.2f $,这真是一个坏消息"
+book = {"source": "淘宝", "book": "Java 入门到放弃", "price": 9999.561}
+print(temp % book)
+
+temp_school = "亲爱的%(username)s,恭喜你收到%(product)s赠送给你的 %(money)5.2f 代金券，请在%(time)s之前到 %(address)s 使用！"
+wan_da = {
+    "username": "张三",
+    "product": "天呈慧眼云",
+    "money": 100.0,
+    "time": "2019年10月31日",
+    "address": "成都市金牛区万达广场"
+}
+print(temp_school % wan_da)
