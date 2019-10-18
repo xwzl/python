@@ -27,4 +27,7 @@ len(str1.encode())
 str1 = "人生苦短，我用Python"
 len(str1.encode('gbk'))
 
-
+print(len(str1))
+#
+#
+# 例如，定义一个保存 C语言中文网网址的字符串，然后用 split() 方法根据不同的分隔符进行分隔，执行过程
