@@ -76,3 +76,39 @@ print(eval1)
 # 常用的就是将字符串类型json转为json对象
 a = "{'a': [1, 2, 3], 'b': (3, 4)}"
 print(eval(a))
+b = {}
+print(b.keys())
+# exec只是执行，没有返回值，所以要在代码块中指定变量来获取json的值。
+exec(a, b)
+print(b.keys())
+
+# 慎用 eval()
+# 在默认情况下，eval 函数的 globals 参数会隐式地携带__builtins__ ，所以如果想要禁用它，可以显示指定__builtins__为None，从而限制了表达式调用内置模块或属性的能力
+# eval("qq", {'__builtins__': None})
+
+
+y = 10
+
+
+def jack(x):
+    x = 12
+    # 相当于把变量 y 升级为全局变量
+    global y
+    y = 13
+    print(y)
+
+    def jack_plus():
+        nonlocal x
+        x = 13
+        print(x)
+
+    # 12
+    print(x)
+    # x -> 13
+    jack_plus()
+    # if nonlocal exist ? x -> 13:x -> 12
+    print(x)
+
+
+jack(11)
+print(y)
