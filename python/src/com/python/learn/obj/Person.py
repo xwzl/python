@@ -46,10 +46,11 @@ def intro_func(self, content):
 
 # 使用MethodType对intro_func进行包装，将该函数的第一个参数绑定为p
 me.intro = MethodType(intro_func, me)
+
 # 第一个参数已经绑定了，无需传入
+# 如果希望动态增加的方法也能自动绑定到第一个参数，则可借助于 types 模块下的 MethodType 进行包装。
 me.intro("生活在别处")
 
 me.ketty = intro_func
 
-me.ketty(me, "hello")
 me.ketty(me, "hello")
