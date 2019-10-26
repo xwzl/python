@@ -34,3 +34,22 @@ m.work()
 #
 # 注意，当子类继承多个父类是，super() 函数只能用来调用第一个父类的构造方法，而其它父类的构造方法只能使用未绑定的方式调用。
 help(super)
+
+
+# Manager继承了Employee、Customer
+class Manager(Employee, Customer):
+    # 重写父类的构造方法
+    def __init__(self, salary, favorite, address):
+        print('--Manager的构造方法--')
+        # 通过super()函数调用父类的构造方法
+        super().__init__(salary)
+        # 与上一行代码的效果相同
+        # super(Manager, self).__init__(salary)
+        # 使用未绑定方法调用父类的构造方法
+        Customer.__init__(self, favorite, address)
+
+
+# 创建Manager对象
+m = Manager(25000, 'IT产品', '广州')
+m.work()
+m.info()
