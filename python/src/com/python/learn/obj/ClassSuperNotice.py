@@ -109,3 +109,4 @@ class MyClass(Base1, Base2):
 
 
 MyClass(10)
+
