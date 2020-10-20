@@ -4,16 +4,19 @@ masters = ['王昭君', '甄姬', '貂蝉', '妲己', '小乔', '大乔']
 # pop 方法默认会删除列表里最后一个数据,并且返回这个数据
 # pop还可以传入index参数，用来删除指定位置上的数据
 x = masters.pop(3)
+print(x)
 print(masters)  # ['王昭君', '甄姬', '貂蝉', '小乔', '大乔']
 
 # remove用来删除指定的元素
-masters.remove('小乔')
+if "小乔" in masters:
+    masters.remove('小乔')
 # masters.remove('妲己')  如果数据在列表中不存在，会报错
 print(masters)
 
 # 使用del 也可以删除一个数据
 del masters[2]
 print(masters)
+print(masters[2])
 
 # clear 用来清空一个列表
 masters.clear()
@@ -33,6 +36,7 @@ print(tanks.count('程咬金'))  # 2
 print('张飞' in tanks)  # True
 print('苏烈' in tanks)  # False
 
+print("Hello python".count("o"))
 # 修改元素
 # 使用下标可以直接修改列表里的元素
 tanks[5] = '铠'
