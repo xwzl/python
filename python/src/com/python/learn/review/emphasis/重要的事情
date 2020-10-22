@@ -1,0 +1,5 @@
+python 中函数可以作为一个变量被传递
+def boo():
+    pass
+
+t = boo # t 指向 boo 方法对应的内存空间

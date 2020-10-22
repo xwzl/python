@@ -47,3 +47,5 @@ if 3 > 2:
 print(m)
 
 print(globals())
+
+print(isinstance("ss", (str, int)))
