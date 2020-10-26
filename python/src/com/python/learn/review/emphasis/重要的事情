@@ -3,3 +3,5 @@ def boo():
     pass
 
 t = boo # t 指向 boo 方法对应的内存空间
+
+day10 day11 # 干货，面向对象的基础
