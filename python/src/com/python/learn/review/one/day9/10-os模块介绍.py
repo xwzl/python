@@ -1,6 +1,7 @@
 # os全称 OperationSystem操作系统
 # os 模块里提供的方法就是用来调用操作系统里的方法
 import os
+from os import path
 
 # os.name ==> 获取操作系统的名字    windows系列 ==>nt / 非windows ==>posix
 print(os.name)  # nt

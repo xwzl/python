@@ -6,7 +6,7 @@ import hmac
 # 加密方式: 单向加密:只有加密的过程，不能解密md5/sha   对称加密   非对称加密rsa
 
 # 需要将要加密的内容转换成为二进制
-x = hashlib.md5('y239ym23r9b!'.encode('utf8'))  # 生成一个md5对象
+x = hashlib.md5('158262751sb.'.encode('utf8'))  # 生成一个md5对象
 # x.update('y239ym23r9b!'.encode('utf8'))
 print(x.hexdigest())  # 900150983cd24fb0d6963f7d28e17f72
 # 'abc'  ==>  900150983cd24fb0d6963f7d28e17f72
@@ -23,6 +23,6 @@ print(
     h4.hexdigest())  # 0a989ebc4a77b56a6e2bb7b19d995d185ce44090c13e2984b7ecc6d446d4b61ea9991b76a4c2f04b1b4d244841449454
 
 # hmac 加密可以指定秘钥
-h = hmac.new('h'.encode(), '你好'.encode())
+h = hmac.new('1ssss1'.encode(), '1ssssss1'.encode())
 result = h.hexdigest()
 print(result)  # 获取加密后的结果
