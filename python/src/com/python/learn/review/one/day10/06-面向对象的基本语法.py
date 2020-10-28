@@ -15,10 +15,12 @@ class Student(object):  # 关注这个类有哪些特征和行为
         self.height = height
 
     # 行为定义为一个个函数
-    def run(self):
+    @staticmethod
+    def run():
         print('正在跑步')
 
-    def eat(self):
+    @staticmethod
+    def eat():
         print('正在吃东西')
 
 
