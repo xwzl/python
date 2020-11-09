@@ -1,7 +1,6 @@
-import file_manager
-import model
-import student_manager
+
 import tools
+from python.src.com.python.learn.review.one.day16 import file_manager, model
 
 USERS_FILE = 'teachers.json'
 

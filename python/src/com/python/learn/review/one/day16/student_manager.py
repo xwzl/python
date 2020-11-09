@@ -15,9 +15,7 @@
     'num': 4
 }
 """
-
-import file_manager
-import model
+from python.src.com.python.learn.review.one.day16 import file_manager, model
 
 USER_NAME = ''
 ALL_STUDENT = 'all_student'
